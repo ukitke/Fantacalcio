@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sconfitta Epocale di Brikel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #ff5722;
+    }
+
+    .foto-brikel {
+      width: 300px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e64a19;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .animations {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .goal {
+      font-size: 40px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .sfotto {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .result-image {
+      width: 100%;
+      max-width: 500px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sconfitta Epocale di Brikel</h1>
+    <p>Brikel ha subito una sconfitta memorabile contro Dionis al fantacalcio.</p>
+    <img src="foto_brikel.jpeg" alt="Foto di Brikel" class="foto-brikel">
+
+    <button id="showResult">Vuoi sapere cosa ha fatto Brikel l'ultima giornata? Clicca qui</button>
+
+    <div id="result" class="hidden">
+      <div class="animations">
+        <div class="goal">⚽</div>
+        <div class="goal">⚽</div>
+        <div class="goal">⚽</div>
+        <div class="goal">⚽</div>
+        <div class="goal">⚽</div>
+      </div>
+      <p class="sfotto">Brikel ha preso <strong>5 gol</strong> e si è classificato ultimo!</p>
+      <img src="risultato.jpeg" alt="Risultato della partita" class="result-image">
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('showResult').addEventListener('click', function () {
+      const result = document.getElementById('result');
+      result.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
